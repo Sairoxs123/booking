@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://pbs.twimg.com/profile_images/987687428365389825/F42jiM8p_400x400.jpg" type="image/jpg" rel="icon">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/desktop/admin.css')}}">
+    <style>
+        body::-webkit-scrollbar{
+            display: none;
+        }
+
+        body{
+            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("{{ url_for ('static', filename = 'images/school.jpg')}}");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logout">
+        <a href="/desktop/logout">Logout</a>
+    </div>
+    <div class="login">
+        <h1>Booked Timings</h1>
+        <table border="2">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Time and date of booking</th>
+                <th>Booked date</th>
+                <th>Starting time</th>
+                <th>Ending time</th>
+                <th>Purpose</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in results %}
+            <tr>
+                <td>
+                    {{ i["name"] }}
+                </td>
+                <td>
+                    {{ i["email"] }}
+                </td>
+                <td>
+                    {{ i["time_of_booking"] }}
+                </td>
+                <td>
+                    {{ i["date"] }}
+                </td>
+                <td>
+                    {{ i["starting_period"] }}
+                </td>
+                <td>
+                    {{ i["ending_period"] }}
+                </td>
+                <td>
+                    {{ i["purpose"] }}
+                </td>
+                <td>
+                    <form action="/desktop/admin-delete" method="post">
+                        <input type="text" name="name" placeholder="Enter Name: " value="{{ i ['name'] }}" hidden>
+                        <input type="email" name="email" placeholder="Enter Email: " value="{{ i['email'] }}" hidden>
+                        <input type="date" name="date" value="{{ i['date'] }}" hidden>
+                        <input type="number" name="start" value="{{ i['starting_period'] }}" hidden>
+                        <input type="number" name="end" value="{{ i['ending_period'] }}" hidden>
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
