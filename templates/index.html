@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://pbs.twimg.com/profile_images/987687428365389825/F42jiM8p_400x400.jpg" type="image/jpg" rel="icon">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/style.css') }}">
+    <style>
+        header{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("{{ url_for ('static', filename = 'images/school.jpg')}}");
+        }
+    </style>
+    <title>Welcome!</title>
+</head>
+<body>
+    <header>
+		<div class="main">
+		 <div class="title">
+		 	<center><h1>BOOK!</h1>
+<h6>Book the auditorium of JSS Private School from here.</h6>
+<br>
+<br>
+<br>
+<br>
+<br>
+		 </div>
+		 <div class="button">
+		 	<a href="/desktop" class="btn">Desktop</a>
+            &nbsp;&nbsp;&nbsp;
+		 	<a href="/mobile" class="btn">Mobile</a>
+		 </div>
+
+		 	</header>
+</body>
+</html>

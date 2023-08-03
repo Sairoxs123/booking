@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://pbs.twimg.com/profile_images/987687428365389825/F42jiM8p_400x400.jpg" type="image/jpg" rel="icon">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/desktop/style.css') }}">
+    <style>
+        header{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("{{ url_for ('static', filename = 'images/school.jpg')}}");
+        }
+        .home-button{
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: bisque;
+      height: 4%;
+      width: 6%;
+      padding: 1% 1.5% 1% 1.5%;
+    }
+
+    .home-button a{
+      font-size: 25px;
+      font-weight: 900;
+    }
+    </style>
+    <title>Welcome!</title>
+</head>
+<body>
+    <div class="home-button">
+        <a href="/">Home</a>
+      </div>
+
+    <header>
+		<div class="main">
+		 <div class="title">
+		 	<center><h1>BOOK!</h1>
+<h6>Book the auditorium of JSS Private School from here.</h6>
+<br>
+<br>
+<br>
+<br>
+<br>
+		 </div>
+		 <div class="button">
+		 	<a href="/desktop/booking" class="btn">BOOK</a>
+            &nbsp;&nbsp;&nbsp;
+		 	<a href="/desktop/delete-booking" class="btn">DELETE</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="/desktop/admin-login" class="btn">ADMIN ACCESS</a>
+		 </div>
+
+		 	</header>
+</body>
+</html>

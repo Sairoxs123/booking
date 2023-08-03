@@ -1,0 +1,132 @@
+body::-webkit-scrollbar{
+  display: none;
+}
+  body {
+    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+    color: #404040;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("{{url_for ('static', filename='images/school.jpg')}}");
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      min-height: 100px;
+  }
+
+  .book {
+    position: relative;
+    margin-top: 7.5%;
+    margin-left: 60%;
+    padding: 4% 5% 1%;
+    width: 25%;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .available{
+    position: relative;
+    margin-top: 10%;
+    margin-left: 1%;
+    padding: 4% 5% 1%;
+    width: 37.5%;
+    background: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    float: left;
+  }
+
+  .book:before, .available::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+  }
+
+  .book h1, .available h1 {
+    margin: -20px -20px 21px;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, #D2F7DA, #9CF7ED);
+    text-transform: capitalize;
+  }
+
+  .book p {
+    margin: 40px 0px 5px 70px;
+  }
+
+  .book p.submit {
+    text-align: right;
+  }
+  label{
+    margin: 60px 20px 20px 5px;
+  font-size:20px;
+  color:green;
+  }
+  input {
+    font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+  }
+  input[type=date] {
+   font-size: 20px;
+  }
+
+  input[type=submit] {
+    padding: 0 13px;
+    height: 39px;
+    font-size: 19px;
+    font-weight: bold;
+    color: green;
+    background: white;
+    border: 1px solid;
+    border-color: #b4ccce #b3c0c8 #9eb9c2;
+    border-radius: 0px;
+    outline: 0;
+  background-image: -webkit-linear-gradient(top, #D2F7DA, #9CF7ED);
+  cursor: pointer;
+  }
+  textarea{
+      resize: none;
+  }
+
+  table{
+    width: 100%;
+    height: 42%;
+  }
+
+  th, td{
+    text-align: center;
+  }
+
+  h2{
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .link a {
+    margin-left: -15%;
+    padding: 2%;
+    line-height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    text-shadow: 0 1px white;
+    background: #f3f3f3;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    background-image: -webkit-linear-gradient(top, #D2F7DA, #9CF7ED);
+    text-transform: capitalize;
+  }
