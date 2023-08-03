@@ -2,7 +2,6 @@ from flask import Flask, render_template, redirect, request, session
 from flask_session import Session
 from cs50 import SQL
 from datetime import datetime
-import webview
 
 
 app = Flask(__name__)
@@ -269,8 +268,3 @@ def error404(e):
 @app.errorhandler(500)
 def error500(e):
     return render_template("500.html"), 500
-
-if __name__ == "__main__":
-    # webview.start()
-    app.run(debug=True)
-
