@@ -5,7 +5,6 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-webview.create_window("Booking", app)
 
 
 # Configure session
