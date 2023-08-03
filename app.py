@@ -25,7 +25,7 @@ ending_periods = [2, 3, 4, 5, 6, 7, 8, 9]
 
 
 
-db = SQL("mysql://root:p14vyKATj1u9Woff4muB@containers-us-west-152.railway.app:5860/railway")
+db = SQL("mysql://root:YuFceU03fkHwBh2ScInC@containers-us-west-160.railway.app:6275/railway")
 
 admin_password = "schoolpassword"
 
