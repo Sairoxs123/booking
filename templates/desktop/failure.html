@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://pbs.twimg.com/profile_images/987687428365389825/F42jiM8p_400x400.jpg" type="image/jpg" rel="icon">
+    <title>Failure!!</title>
+    <style>
+        body{
+            background-color: cyan;
+            background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yallaschools.com/uploads/JSS_Pvt_School.jpg);
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+        }
+        #message{
+            position: sticky;
+            text-align: center;
+            margin-top: 15%;
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+            background-color: #E8E8E8;
+            width: 80%;
+            height: 22em;
+            padding: 0%;
+            opacity: .8;
+        }
+        h1{
+            font-weight: 900;
+            font-size: 3em;
+            padding-top: 5%;
+        }
+        h2{
+            font-weight: 600;
+            font-size: 2.5em;
+        }
+        h1, h2{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">
+        {% if error == "empty" %}
+        <h1>Form was not filled completely.</h1>
+    {% elif error == "timings" %}
+        <h1>
+            The starting time and ending time you have entered is the same.
+        </h1>
+    {% elif error == "booked" %}
+        <h1>
+            {% for i in results %}
+                Sorry the auditorium has been booked by {{ i["name"].capitalize() }} from {{ i["starting_period"] }}st/nd/rd period to {{ i["ending_period"] }}st/nd/rd period.
+            {% endfor %}
+        </h1>
+    {% elif error == "greater" %}
+        <h1>
+            Ending period is lower than starting period.
+        </h1>
+    {% elif error == "email" %}
+        <h1>
+            Email must include @jsspsdubai.com
+        </h1>
+    {% elif error == "booking no exist" %}
+        <h1>The booking you are trying to delete doesn't exist.</h1>
+    {% endif %}
+        <h2>This window will be redirected back to home page in <span>5</span> seconds.</h2>
+    </div>
+    <script>
+        window.onload = load;
+
+        function load() {
+            var time = 4;
+            for (let count = 0; count < 1; count++) {
+                setInterval(() => {
+                    document.querySelector("span").innerHTML = time;
+                    time = time - 1;
+                    if (time == 0) {
+                        window.open("/desktop", "_self");
+                    }
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>
+Booking
+</title>
+<link rel="stylesheet" href="{{ url_for ('static', filename = 'css/mobile/booking.css')}}">
+<link href="https://pbs.twimg.com/profile_images/987687428365389825/F42jiM8p_400x400.jpg" type="image/jpg" rel="icon">
+<style>
+          body{
+        background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("{{ url_for ('static', filename = 'images/school.jpg ')}}");
+    }
+    .home-button{
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: bisque;
+      height: 1%;
+      width: 10%;
+      padding: 4% 4% 4% 2%;
+    }
+
+    .home-button a{
+      font-size: 3em;
+      font-weight: 900;
+    }
+</style>
+</head>
+<body>
+
+<div class="home-button">
+  <a href="/mobile">Home</a>
+</div>
+
+<div class="login">
+  <h1>Choose the date</h1>
+
+  <form method="post" action="/mobile/check" id="form">
+        <label>Which day do you want to book?</label>
+    <p><input type="date" name="date" required></p>
+
+<p class="submit">
+<input type="submit" value="Submit" form="form">
+</p>
+  </form>
+</div>
+
+</body>
+</html>
