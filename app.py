@@ -32,7 +32,7 @@ ending_periods = [2, 3, 4, 5, 6, 7, 8, 9]
 
 
 
-db = SQL("sqlite:///booking.db")
+db = SQL("mysql://root:YuFceU03fkHwBh2ScInC@containers-us-west-160.railway.app:6275/railway")
 
 admin_password = "schoolpassword"
 
